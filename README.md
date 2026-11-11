@@ -15,6 +15,8 @@
 
 ## Features
 
+Planned for v1. Progress is tracked in the Roadmap below.
+
 - **Few-shot anomaly detection**: learns what "good" looks like from a handful of defect-free images, no defect labels needed.
 - **Heatmap overlay**: shows where on the part the anomaly is, with an adjustable threshold.
 - **Web demo**: upload an image, get a score and a heatmap.
