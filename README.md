@@ -35,8 +35,8 @@ flowchart TB
   DS --> EX["Web demo · PNG · JSON / CSV"]:::ink
   subgraph BK["Backend · pick one"]
     direction LR
-    A["<b>(a) Your API key</b><br/>OpenAI-compatible<br/>vision model"]:::rust
-    H["<b>(b) Hugging Face</b><br/>Qwen2.5-VL-7B-Instruct<br/>run locally"]:::rust
+    BKA["<b>(a) Your API key</b><br/>OpenAI-compatible<br/>vision model"]:::rust
+    BKH["<b>(b) Hugging Face</b><br/>Qwen2.5-VL-7B-Instruct<br/>run locally"]:::rust
   end
   BK -.-> DS
 
