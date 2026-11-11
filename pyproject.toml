@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "defect-inspector"
+version = "0.0.1"
+description = "Find surface defects from a few good samples, with a heatmap of where they are."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Modelshifts", email = "info@modelshifts.com" }]
+dependencies = ["pydantic>=2", "pillow>=10"]
+
+[project.optional-dependencies]
+api = ["openai>=1.40"]
+hf = ["anomalib>=1.1", "transformers>=4.45", "torch>=2.3"]
+
+[project.urls]
+Homepage = "https://modelshifts.com/work"
+Repository = "https://github.com/ModelShifts/defect-inspector"
+
+[project.scripts]
+defect-inspector = "defect_inspector.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/defect_inspector"]
