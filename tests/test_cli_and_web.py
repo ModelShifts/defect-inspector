@@ -33,6 +33,8 @@ def test_cli_fit_inspect_batch(samples, tmp_path, capsys):
 
 def test_cli_errors(samples, tmp_path, monkeypatch):
     assert cli.main(["inspect", str(samples / "metal/test/good/000.png"), "--model", str(tmp_path / "nope.npz")]) == 2
+    (tmp_path / "bad.npz").write_text("not a model")
+    assert cli.main(["inspect", str(samples / "metal/test/good/000.png"), "--model", str(tmp_path / "bad.npz")]) == 2
     model = tmp_path / "m.npz"
     cli.main(["fit", str(samples / "metal/train/good"), "--out", str(model)])
     monkeypatch.setenv("MS_BACKEND", "api")  # no MS_API_BASE / MS_MODEL: clear error, exit 2

@@ -32,7 +32,10 @@ def _load_model(path: str):
 
     if not Path(path).exists():
         raise FileNotFoundError(f"model file not found: {path} (create it with 'defect-inspector fit')")
-    return PatchCoreModel.load(path)
+    try:
+        return PatchCoreModel.load(path)
+    except (OSError, EOFError, KeyError, ValueError) as exc:
+        raise ValueError(f"{path} is not a defect-inspector model file ({exc})") from exc
 
 
 def cmd_fit(args: argparse.Namespace) -> int:
