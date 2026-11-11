@@ -1,0 +1,319 @@
+{
+  "seed": 7,
+  "size": 256,
+  "surfaces": {
+    "metal": {
+      "train": [
+        "metal/train/good/000.png",
+        "metal/train/good/001.png",
+        "metal/train/good/002.png",
+        "metal/train/good/003.png",
+        "metal/train/good/004.png",
+        "metal/train/good/005.png",
+        "metal/train/good/006.png",
+        "metal/train/good/007.png"
+      ],
+      "test": [
+        {
+          "image": "metal/test/good/000.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/good/001.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/good/002.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/good/003.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/good/004.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/good/005.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "metal/test/scratch/000.png",
+          "label": "scratch",
+          "mask": "metal/ground_truth/scratch/000_mask.png"
+        },
+        {
+          "image": "metal/test/scratch/001.png",
+          "label": "scratch",
+          "mask": "metal/ground_truth/scratch/001_mask.png"
+        },
+        {
+          "image": "metal/test/scratch/002.png",
+          "label": "scratch",
+          "mask": "metal/ground_truth/scratch/002_mask.png"
+        },
+        {
+          "image": "metal/test/scratch/003.png",
+          "label": "scratch",
+          "mask": "metal/ground_truth/scratch/003_mask.png"
+        },
+        {
+          "image": "metal/test/dent/000.png",
+          "label": "dent",
+          "mask": "metal/ground_truth/dent/000_mask.png"
+        },
+        {
+          "image": "metal/test/dent/001.png",
+          "label": "dent",
+          "mask": "metal/ground_truth/dent/001_mask.png"
+        },
+        {
+          "image": "metal/test/dent/002.png",
+          "label": "dent",
+          "mask": "metal/ground_truth/dent/002_mask.png"
+        },
+        {
+          "image": "metal/test/dent/003.png",
+          "label": "dent",
+          "mask": "metal/ground_truth/dent/003_mask.png"
+        },
+        {
+          "image": "metal/test/spot/000.png",
+          "label": "spot",
+          "mask": "metal/ground_truth/spot/000_mask.png"
+        },
+        {
+          "image": "metal/test/spot/001.png",
+          "label": "spot",
+          "mask": "metal/ground_truth/spot/001_mask.png"
+        },
+        {
+          "image": "metal/test/spot/002.png",
+          "label": "spot",
+          "mask": "metal/ground_truth/spot/002_mask.png"
+        },
+        {
+          "image": "metal/test/spot/003.png",
+          "label": "spot",
+          "mask": "metal/ground_truth/spot/003_mask.png"
+        }
+      ]
+    },
+    "fabric": {
+      "train": [
+        "fabric/train/good/000.png",
+        "fabric/train/good/001.png",
+        "fabric/train/good/002.png",
+        "fabric/train/good/003.png",
+        "fabric/train/good/004.png",
+        "fabric/train/good/005.png",
+        "fabric/train/good/006.png",
+        "fabric/train/good/007.png"
+      ],
+      "test": [
+        {
+          "image": "fabric/test/good/000.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/good/001.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/good/002.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/good/003.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/good/004.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/good/005.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "fabric/test/scratch/000.png",
+          "label": "scratch",
+          "mask": "fabric/ground_truth/scratch/000_mask.png"
+        },
+        {
+          "image": "fabric/test/scratch/001.png",
+          "label": "scratch",
+          "mask": "fabric/ground_truth/scratch/001_mask.png"
+        },
+        {
+          "image": "fabric/test/scratch/002.png",
+          "label": "scratch",
+          "mask": "fabric/ground_truth/scratch/002_mask.png"
+        },
+        {
+          "image": "fabric/test/scratch/003.png",
+          "label": "scratch",
+          "mask": "fabric/ground_truth/scratch/003_mask.png"
+        },
+        {
+          "image": "fabric/test/dent/000.png",
+          "label": "dent",
+          "mask": "fabric/ground_truth/dent/000_mask.png"
+        },
+        {
+          "image": "fabric/test/dent/001.png",
+          "label": "dent",
+          "mask": "fabric/ground_truth/dent/001_mask.png"
+        },
+        {
+          "image": "fabric/test/dent/002.png",
+          "label": "dent",
+          "mask": "fabric/ground_truth/dent/002_mask.png"
+        },
+        {
+          "image": "fabric/test/dent/003.png",
+          "label": "dent",
+          "mask": "fabric/ground_truth/dent/003_mask.png"
+        },
+        {
+          "image": "fabric/test/spot/000.png",
+          "label": "spot",
+          "mask": "fabric/ground_truth/spot/000_mask.png"
+        },
+        {
+          "image": "fabric/test/spot/001.png",
+          "label": "spot",
+          "mask": "fabric/ground_truth/spot/001_mask.png"
+        },
+        {
+          "image": "fabric/test/spot/002.png",
+          "label": "spot",
+          "mask": "fabric/ground_truth/spot/002_mask.png"
+        },
+        {
+          "image": "fabric/test/spot/003.png",
+          "label": "spot",
+          "mask": "fabric/ground_truth/spot/003_mask.png"
+        }
+      ]
+    },
+    "stone": {
+      "train": [
+        "stone/train/good/000.png",
+        "stone/train/good/001.png",
+        "stone/train/good/002.png",
+        "stone/train/good/003.png",
+        "stone/train/good/004.png",
+        "stone/train/good/005.png",
+        "stone/train/good/006.png",
+        "stone/train/good/007.png"
+      ],
+      "test": [
+        {
+          "image": "stone/test/good/000.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/good/001.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/good/002.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/good/003.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/good/004.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/good/005.png",
+          "label": "good",
+          "mask": null
+        },
+        {
+          "image": "stone/test/scratch/000.png",
+          "label": "scratch",
+          "mask": "stone/ground_truth/scratch/000_mask.png"
+        },
+        {
+          "image": "stone/test/scratch/001.png",
+          "label": "scratch",
+          "mask": "stone/ground_truth/scratch/001_mask.png"
+        },
+        {
+          "image": "stone/test/scratch/002.png",
+          "label": "scratch",
+          "mask": "stone/ground_truth/scratch/002_mask.png"
+        },
+        {
+          "image": "stone/test/scratch/003.png",
+          "label": "scratch",
+          "mask": "stone/ground_truth/scratch/003_mask.png"
+        },
+        {
+          "image": "stone/test/dent/000.png",
+          "label": "dent",
+          "mask": "stone/ground_truth/dent/000_mask.png"
+        },
+        {
+          "image": "stone/test/dent/001.png",
+          "label": "dent",
+          "mask": "stone/ground_truth/dent/001_mask.png"
+        },
+        {
+          "image": "stone/test/dent/002.png",
+          "label": "dent",
+          "mask": "stone/ground_truth/dent/002_mask.png"
+        },
+        {
+          "image": "stone/test/dent/003.png",
+          "label": "dent",
+          "mask": "stone/ground_truth/dent/003_mask.png"
+        },
+        {
+          "image": "stone/test/spot/000.png",
+          "label": "spot",
+          "mask": "stone/ground_truth/spot/000_mask.png"
+        },
+        {
+          "image": "stone/test/spot/001.png",
+          "label": "spot",
+          "mask": "stone/ground_truth/spot/001_mask.png"
+        },
+        {
+          "image": "stone/test/spot/002.png",
+          "label": "spot",
+          "mask": "stone/ground_truth/spot/002_mask.png"
+        },
+        {
+          "image": "stone/test/spot/003.png",
+          "label": "spot",
+          "mask": "stone/ground_truth/spot/003_mask.png"
+        }
+      ]
+    }
+  },
+  "note": "procedurally generated, no real data"
+}
