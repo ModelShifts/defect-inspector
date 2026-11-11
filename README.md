@@ -25,20 +25,22 @@
 ## Architecture
 
 ```mermaid
-flowchart LR
+%%{init: {"theme":"base","flowchart":{"curve":"basis","wrappingWidth":260},"themeVariables":{"fontFamily":"Georgia, Times New Roman, serif","fontSize":"14px","primaryColor":"#f3efe6","primaryTextColor":"#1c1a17","primaryBorderColor":"#1c1a17","lineColor":"#1c1a17","clusterBkg":"#faf7f0","clusterBorder":"#8a3a24","titleColor":"#8a3a24","edgeLabelBackground":"#f3efe6"}}}%%
+flowchart TB
   G["A few good samples"]:::ink --> F["Feature extractor<br/>wide_resnet50_2 / DINOv2"]:::ink
   F --> M["Memory bank<br/>PatchCore via anomalib"]:::ink
   T["New image"]:::ink --> F
   M --> HM["Anomaly score<br/>+ heatmap"]:::ink
   HM --> DS["Describe and label<br/>the defect"]:::ink
   DS --> EX["Web demo · PNG · JSON / CSV"]:::ink
-  subgraph BK["Backend: pick one, same interface"]
-    direction TB
-    A["(a) Bring your own API key<br/>hosted OpenAI-compatible vision model"]:::rust
-    H["(b) Open-source on Hugging Face<br/>Qwen2.5-VL-7B-Instruct, run locally"]:::rust
+  subgraph BK["Backend · pick one"]
+    direction LR
+    A["<b>(a) Your API key</b><br/>OpenAI-compatible<br/>vision model"]:::rust
+    H["<b>(b) Hugging Face</b><br/>Qwen2.5-VL-7B-Instruct<br/>run locally"]:::rust
   end
   BK -.-> DS
 
+  classDef cl fill:#faf7f0,stroke:#8a3a24,stroke-dasharray:4 3,color:#8a3a24;
   classDef ink fill:#f3efe6,stroke:#1c1a17,color:#1c1a17,stroke-width:1px;
   classDef rust fill:#f3efe6,stroke:#8a3a24,color:#8a3a24,stroke-width:1.5px;
 ```
