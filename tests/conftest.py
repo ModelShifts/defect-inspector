@@ -44,8 +44,9 @@ def fake_backbone(monkeypatch, tmp_path):
     monkeypatch.setitem(features._CACHE, ("fake-backbone", 256), FakeExtractor())
     monkeypatch.setenv("MS_BACKBONE", "fake-backbone")
     monkeypatch.setenv("MS_CACHE_DIR", str(tmp_path / "cache"))
+    # empty values (not unset) so a local .env cannot fill them in
     for var in ("MS_BACKEND", "MS_API_BASE", "MS_API_KEY", "MS_MODEL"):
-        monkeypatch.delenv(var, raising=False)
+        monkeypatch.setenv(var, "")
     return FakeExtractor()
 
 

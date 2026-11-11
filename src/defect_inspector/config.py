@@ -21,8 +21,8 @@ def load_dotenv_if_present(path: str | os.PathLike | None = None) -> None:
 
 
 def _env(name: str, default: str = "") -> str:
-    value = os.environ.get(name, default)
-    return value.strip() if isinstance(value, str) else default
+    value = (os.environ.get(name) or "").strip()
+    return value or default
 
 
 @dataclass
