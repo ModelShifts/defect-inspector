@@ -48,5 +48,5 @@ jobs:
       - name: CLI smoke test
         run: |
           defect-inspector --version
-          # describe on the api backend without settings must fail with a clear message (exit 2)
+          # a missing model file must fail with a clear message (exit 2)
           defect-inspector inspect samples/metal/test/good/000.png --model missing.npz || test $? -eq 2
