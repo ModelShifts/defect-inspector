@@ -79,10 +79,6 @@ defect-inspector fit samples/good/
 defect-inspector inspect part.jpg --heatmap out/part_heatmap.png
 ```
 
-## Try it
-
-> **Coming soon.** A hosted demo will be linked here and on [modelshifts.com/work](https://modelshifts.com/work).
-
 ## Roadmap
 
 - [x] Repository scaffold and README
