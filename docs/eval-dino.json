@@ -1,0 +1,587 @@
+{
+  "backbone": "facebook/dinov2-small",
+  "describer": null,
+  "metrics": [
+    {
+      "surface": "metal",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 1.0,
+      "pixel_auroc": 0.996,
+      "flagged_defect": "12/12",
+      "flagged_good": "1/6",
+      "top_region_hits": "12/12",
+      "fit_s": 55.9,
+      "s_per_image": 1.99
+    },
+    {
+      "surface": "fabric",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 1.0,
+      "pixel_auroc": 0.996,
+      "flagged_defect": "12/12",
+      "flagged_good": "0/6",
+      "top_region_hits": "12/12",
+      "fit_s": 31.5,
+      "s_per_image": 1.83
+    },
+    {
+      "surface": "stone",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 0.958,
+      "pixel_auroc": 0.823,
+      "flagged_defect": "10/12",
+      "flagged_good": "1/6",
+      "top_region_hits": "10/10",
+      "fit_s": 3.7,
+      "s_per_image": 0.03
+    }
+  ],
+  "images": [
+    {
+      "surface": "metal",
+      "image": "metal/test/good/000.png",
+      "truth": "good",
+      "score": 0.9405,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/001.png",
+      "truth": "good",
+      "score": 0.856,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/002.png",
+      "truth": "good",
+      "score": 1.1396,
+      "defect": true,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/003.png",
+      "truth": "good",
+      "score": 0.8267,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/004.png",
+      "truth": "good",
+      "score": 0.9011,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/005.png",
+      "truth": "good",
+      "score": 0.8874,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 2.3207,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 2.2085,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 2.3498,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 2.3346,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/000.png",
+      "truth": "dent",
+      "score": 2.0671,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/001.png",
+      "truth": "dent",
+      "score": 2.0239,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/002.png",
+      "truth": "dent",
+      "score": 2.0797,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/003.png",
+      "truth": "dent",
+      "score": 2.1711,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/000.png",
+      "truth": "spot",
+      "score": 2.1247,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/001.png",
+      "truth": "spot",
+      "score": 2.13,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/002.png",
+      "truth": "spot",
+      "score": 2.0217,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/003.png",
+      "truth": "spot",
+      "score": 2.1407,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/000.png",
+      "truth": "good",
+      "score": 0.7462,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/001.png",
+      "truth": "good",
+      "score": 0.6661,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/002.png",
+      "truth": "good",
+      "score": 0.657,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/003.png",
+      "truth": "good",
+      "score": 0.7147,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/004.png",
+      "truth": "good",
+      "score": 0.7909,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/005.png",
+      "truth": "good",
+      "score": 0.7863,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 1.2154,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 1.12,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 1.3159,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 1.3608,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/000.png",
+      "truth": "dent",
+      "score": 1.4927,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/001.png",
+      "truth": "dent",
+      "score": 1.4443,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/002.png",
+      "truth": "dent",
+      "score": 1.4265,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/003.png",
+      "truth": "dent",
+      "score": 1.3489,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/000.png",
+      "truth": "spot",
+      "score": 1.4979,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/001.png",
+      "truth": "spot",
+      "score": 1.4037,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/002.png",
+      "truth": "spot",
+      "score": 1.2572,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/003.png",
+      "truth": "spot",
+      "score": 1.3677,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/000.png",
+      "truth": "good",
+      "score": 0.9498,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/001.png",
+      "truth": "good",
+      "score": 0.8961,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/002.png",
+      "truth": "good",
+      "score": 1.0874,
+      "defect": true,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/003.png",
+      "truth": "good",
+      "score": 0.8938,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/004.png",
+      "truth": "good",
+      "score": 0.8866,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/005.png",
+      "truth": "good",
+      "score": 0.8504,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 1.9053,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 1.9663,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 2.0946,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 1.7562,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/000.png",
+      "truth": "dent",
+      "score": 2.0357,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/001.png",
+      "truth": "dent",
+      "score": 0.9598,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/002.png",
+      "truth": "dent",
+      "score": 1.4873,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/003.png",
+      "truth": "dent",
+      "score": 0.9134,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/000.png",
+      "truth": "spot",
+      "score": 1.7496,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/001.png",
+      "truth": "spot",
+      "score": 1.825,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/002.png",
+      "truth": "spot",
+      "score": 1.9716,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/003.png",
+      "truth": "spot",
+      "score": 1.6818,
+      "defect": true,
+      "top_region_hit": true,
+      "label": null,
+      "description": null
+    }
+  ]
+}
