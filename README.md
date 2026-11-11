@@ -148,7 +148,7 @@ python scripts/evaluate.py --describe        # also checks region labels with th
 - Flagged regions follow the smoothed heatmap, so their boxes are larger than the defect itself and are not a segmentation.
 - Images are resized to a square (256 px by default). Very small defects on large images may be missed; crop or tile large images first.
 - Region labels come from a general vision-language model and can be wrong; on the synthetic set the most common mistake is calling a dent a spot. They are a description to help review, not a classification you can rely on.
-- On a CPU, the default backbone takes about 1 to 2 seconds per image; Qwen2.5-VL-7B needs a GPU.
+- On an 8-core CPU, fitting on 8 images takes a few seconds and scoring takes well under a second per image. Describing a region with Qwen3-VL-2B on CPU takes a few seconds; Qwen2.5-VL-7B needs a GPU.
 - The web demo keeps fitted sample models and region descriptions under `.cache/` and reuses them.
 
 ## Roadmap
