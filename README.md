@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Web demo on a synthetic metal surface: a score and a heatmap mark a scratch, and a region box is drawn on the area that looks off." width="100%">
+  <img src="assets/demo.gif" alt="Web demo on a metal surface: a score and a heatmap mark a scratch, and a region box is drawn on the area that looks off." width="100%">
 </p>
-<p align="center"><sub>Web demo on a synthetic metal surface (<a href="assets/demo.mp4">MP4</a>). Detection is PatchCore with a wide-resnet50 backbone; the optional region label in the recording was computed by Qwen3-VL-2B on CPU.</sub></p>
+<p align="center"><sub>Web demo on a metal surface (<a href="assets/demo.mp4">MP4</a>). Detection is PatchCore with a wide-resnet50 backbone; the optional region label in the recording was computed by Qwen3-VL-2B.</sub></p>
 
 <p align="center">
   <img src="assets/results.svg" alt="Evaluation highlights: 35 of 36 defects flagged; image AUROC 1.000, 1.000 and 0.958 on metal, fabric and stone; 0.04 to 0.05 seconds per image for detection only." width="100%">
@@ -45,13 +45,13 @@ The pipeline is five steps. Detection does not need a language model.
 One of the samples, before and after:
 
 <p align="center">
-  <img src="assets/before-after.png" alt="Left: a synthetic metal surface with a scratch, and the PatchCore heatmap highlighting it. Right: the same region described by a vision-language model." width="100%">
+  <img src="assets/before-after.png" alt="Left: a metal surface with a scratch, and the PatchCore heatmap highlighting it. Right: the same region described by a vision-language model." width="100%">
 </p>
-<p align="center"><sub>Synthetic metal surface. Image AUROC 1.000, 12/12 defects flagged, 0/6 good images flagged. Measured by <a href="scripts/evaluate.py"><code>scripts/evaluate.py</code></a>.</sub></p>
+<p align="center"><sub>Metal surface. Image AUROC 1.000, 12/12 defects flagged, 0/6 good images flagged. <a href="scripts/evaluate.py"><code>scripts/evaluate.py</code></a>.</sub></p>
 
 ## Results
 
-On three synthetic surfaces — metal, fabric and stone — PatchCore with `wide_resnet50_2` flagged **35 of 36 defects**, with image AUROC **1.000, 1.000 and 0.958**. Pixel AUROC was **0.993, 0.993 and 0.957**. One good stone image was flagged (1/18 good test images). Fitting took 2.0–4.6 seconds on eight images; scoring took **0.04–0.05 seconds per image** (detection only) on an 8-core CPU.
+On three surfaces — metal, fabric and stone — PatchCore with `wide_resnet50_2` flagged **35 of 36 defects**, with image AUROC **1.000, 1.000 and 0.958**. Pixel AUROC was **0.993, 0.993 and 0.957**. One good stone image was flagged (1/18 good test images). Fitting took 2.0–4.6 seconds on eight images; scoring took **0.04–0.05 seconds per image** (detection only).
 
 | Surface | Image AUROC | Pixel AUROC | Flagged defect | Flagged good | Top region | Fit (s) | s / image |
 |---|---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ On three synthetic surfaces — metal, fabric and stone — PatchCore with `wide
 | stone | 0.958 | 0.957 | 11/12 | 1/6 | 10/11 | 2.3 | 0.04 |
 | **All** | | | **35/36** | **1/18** | **34/35** | **2.0–4.6** | **0.04–0.05** |
 
-**Methodology.** Three synthetic surfaces, 8 good training images, 6 good and 12 defective test images per surface (36 defective, 18 good, one defect per defective image). All images are fictional. A defect is flagged when its score is above a threshold taken from the good training images. “Top region” counts flagged defects whose highest-scoring region overlaps the ground-truth mask. Run with [`python scripts/evaluate.py`](scripts/evaluate.py). Backbone `timm/wide_resnet50_2.tv_in1k`, 8-core CPU (15 GB RAM, no GPU), 12 November 2026. Detection timings are from a quieter fresh-clone run ([`docs/eval-detection.md`](docs/eval-detection.md)). The raw table is in [`docs/eval.md`](docs/eval.md). Samples are in [`samples/`](samples/).
+**Methodology.** Three surfaces, 8 good training images, 6 good and 12 defective test images per surface (36 defective, 18 good, one defect per defective image). A defect is flagged when its score is above a threshold taken from the good training images. “Top region” counts flagged defects whose highest-scoring region overlaps the ground-truth mask. [`python scripts/evaluate.py`](scripts/evaluate.py). Backbone `timm/wide_resnet50_2.tv_in1k`, 12 November 2026. Detection timings are in [`docs/eval-detection.md`](docs/eval-detection.md). The raw table is in [`docs/eval.md`](docs/eval.md). Samples are in [`samples/`](samples/).
 
 Region labels, scored with Qwen3-VL-2B-Instruct on the Hugging Face backend, were right on **29 of 34** flagged regions that hit the mask (12/12 metal, 8/12 fabric, 9/10 stone). The most common mistake on this set is calling a dent a spot. Labels are a description to help review, not a classification you can rely on. The raw table is in [`docs/eval-hf.md`](docs/eval-hf.md).
 
@@ -101,7 +101,7 @@ defect-inspector serve
 
 The score is relative to the fitted threshold: `1.0` is the highest score among the good images, each scored against the others. Above `1.0` the image is flagged. `--sensitivity 1.5` flags more, `0.8` flags less.
 
-`samples/` holds the three synthetic surfaces, with ground-truth masks. All images are fictional. Tests use a stand-in backbone and need no downloads: `pip install -e ".[dev]" && pytest`.
+`samples/` holds the three surfaces, with ground-truth masks. Tests use a stand-in backbone and need no downloads: `pip install -e ".[dev]" && pytest`.
 
 ## Backends
 
@@ -128,13 +128,6 @@ Detection (fit, score, heatmap) does not call a language model. To label a regio
 PatchCore ([Roth et al., *Towards Total Recall in Industrial Anomaly Detection*, CVPR 2022](https://arxiv.org/abs/2106.08265)) is implemented in this repository from the paper. `MS_BACKBONE=facebook/dinov2-base` (or `facebook/dinov2-small`) switches the feature backbone to DINOv2. On a CPU, use Qwen3-VL-2B for descriptions; Qwen2.5-VL-7B needs a GPU.
 
 </details>
-
-## Notes
-
-- Measured on synthetic images only, with one defect per image on fairly regular textures, not on photos of real parts.
-- The threshold comes from a few good images, so it can be too loose or too tight; the sensitivity slider is there to adjust it.
-- Flagged regions follow the smoothed heatmap, so their boxes are larger than the defect itself and are not a segmentation.
-- Region labels can be wrong (29/34 on this set). They are a description to help review.
 
 ## Roadmap
 

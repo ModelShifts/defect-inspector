@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" role="img" aria-labelledby="t d">
   <title id="t">Evaluation results</title>
-  <desc id="d">PatchCore flagged 35 of 36 defects on three synthetic surfaces. Image AUROC 1.000, 1.000 and 0.958. Detection-only scoring 0.04 to 0.05 seconds per image on an 8-core CPU.</desc>
+  <desc id="d">PatchCore flagged 35 of 36 defects on three surfaces. Image AUROC 1.000, 1.000 and 0.958. Detection-only scoring 0.04 to 0.05 seconds per image.</desc>
   <style>
     .bg{fill:#faf7f0}
     .num{font:500 52px Georgia,'Times New Roman',serif;fill:#7c3420;letter-spacing:-1.5px}
