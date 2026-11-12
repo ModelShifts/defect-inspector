@@ -1,0 +1,590 @@
+{
+  "backbone": "timm/wide_resnet50_2.tv_in1k",
+  "describer": "qwen3vl-2b-instruct-q4_k_m",
+  "metrics": [
+    {
+      "surface": "metal",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 1.0,
+      "pixel_auroc": 0.993,
+      "flagged_defect": "12/12",
+      "flagged_good": "0/6",
+      "top_region_hits": "12/12",
+      "fit_s": 4.5,
+      "s_per_image": 2.21,
+      "label_accuracy": "12/12"
+    },
+    {
+      "surface": "fabric",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 1.0,
+      "pixel_auroc": 0.993,
+      "flagged_defect": "12/12",
+      "flagged_good": "0/6",
+      "top_region_hits": "12/12",
+      "fit_s": 2.2,
+      "s_per_image": 4.4,
+      "label_accuracy": "9/12"
+    },
+    {
+      "surface": "stone",
+      "train": 8,
+      "test_good": 6,
+      "test_defect": 12,
+      "image_auroc": 0.958,
+      "pixel_auroc": 0.957,
+      "flagged_defect": "11/12",
+      "flagged_good": "1/6",
+      "top_region_hits": "10/11",
+      "fit_s": 267.9,
+      "s_per_image": 10.61,
+      "label_accuracy": "9/10"
+    }
+  ],
+  "images": [
+    {
+      "surface": "metal",
+      "image": "metal/test/good/000.png",
+      "truth": "good",
+      "score": 0.9318,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/001.png",
+      "truth": "good",
+      "score": 0.9085,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/002.png",
+      "truth": "good",
+      "score": 0.9631,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/003.png",
+      "truth": "good",
+      "score": 0.9334,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/004.png",
+      "truth": "good",
+      "score": 0.9152,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/good/005.png",
+      "truth": "good",
+      "score": 0.9174,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 2.2275,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, white, curved line is visible in the center of the image, indicating a scratch on a manufactured surface."
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 2.3434,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A faint, curved white line is visible in the center of the image, indicating a thin line defect on the surface."
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 2.2534,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, dark line is visible in the center of the image, indicating a scratch on the surface."
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 2.3803,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A curved, thin black line is visible in the center of the image, indicating a scratch on the surface."
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/000.png",
+      "truth": "dent",
+      "score": 1.9228,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/001.png",
+      "truth": "dent",
+      "score": 1.944,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/002.png",
+      "truth": "dent",
+      "score": 2.2247,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/dent/003.png",
+      "truth": "dent",
+      "score": 2.0669,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/000.png",
+      "truth": "spot",
+      "score": 2.2029,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a small, brownish stain or blot on a gray, textured surface"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/001.png",
+      "truth": "spot",
+      "score": 2.4069,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a brownish stain or blot in the center of a manufactured surface"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/002.png",
+      "truth": "spot",
+      "score": 2.2876,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a small, brownish stain or blot on a gray, textured surface"
+    },
+    {
+      "surface": "metal",
+      "image": "metal/test/spot/003.png",
+      "truth": "spot",
+      "score": 2.2051,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a small, brownish stain or blot in the center of the image"
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/000.png",
+      "truth": "good",
+      "score": 0.8525,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/001.png",
+      "truth": "good",
+      "score": 0.9145,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/002.png",
+      "truth": "good",
+      "score": 0.8402,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/003.png",
+      "truth": "good",
+      "score": 0.8285,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/004.png",
+      "truth": "good",
+      "score": 0.9371,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/good/005.png",
+      "truth": "good",
+      "score": 0.8048,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 1.3746,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, vertical line is visible in the center of the image, indicating a scratch on the surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 1.6806,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, curved white line is visible in the center of the image, indicating a scratch on the surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 1.6182,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, white, curved line is visible in the center of the image, indicating a scratch on the surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 1.5717,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, curved white line is visible in the center of the image, indicating a scratch on the manufactured surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/000.png",
+      "truth": "dent",
+      "score": 1.7112,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A dark, irregularly shaped blot on a blue textured surface, indicating a stain or blot of a different color."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/001.png",
+      "truth": "dent",
+      "score": 1.8057,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/002.png",
+      "truth": "dent",
+      "score": 1.5996,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A dark, irregular blot on the blue textured surface, indicating a stain or blot of a different color."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/dent/003.png",
+      "truth": "dent",
+      "score": 1.5802,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A dark, irregularly shaped blot is visible in the center of the image, contrasting with the surrounding blue fabric."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/000.png",
+      "truth": "spot",
+      "score": 1.9746,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A small, dark brown spot is visible in the center of the image, set against a textured blue surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/001.png",
+      "truth": "spot",
+      "score": 2.0805,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A small, dark, irregularly shaped stain is visible in the center of the image, contrasting with the surrounding textured surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/002.png",
+      "truth": "spot",
+      "score": 1.8238,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A small, dark brown stain or blot is visible in the center of the image, set against a textured blue surface."
+    },
+    {
+      "surface": "fabric",
+      "image": "fabric/test/spot/003.png",
+      "truth": "spot",
+      "score": 1.7645,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A dark, irregular blot on a blue woven fabric surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/000.png",
+      "truth": "good",
+      "score": 0.9947,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/001.png",
+      "truth": "good",
+      "score": 0.9138,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/002.png",
+      "truth": "good",
+      "score": 1.0182,
+      "defect": true,
+      "top_region_hit": null,
+      "label": "spot",
+      "description": "A small, irregularly shaped area with a darker coloration, indicating a stain or blot on the surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/003.png",
+      "truth": "good",
+      "score": 0.9475,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/004.png",
+      "truth": "good",
+      "score": 0.9497,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/good/005.png",
+      "truth": "good",
+      "score": 0.9383,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/000.png",
+      "truth": "scratch",
+      "score": 1.5643,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, curved white line is visible in the center of the image, indicating a scratch on the manufactured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/001.png",
+      "truth": "scratch",
+      "score": 1.4309,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, straight line is visible in the center of the image, indicating a scratch on the manufactured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/002.png",
+      "truth": "scratch",
+      "score": 1.6096,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, curved line is visible in the center of the image, indicating a scratch on the manufactured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/scratch/003.png",
+      "truth": "scratch",
+      "score": 1.5025,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "scratch",
+      "description": "A thin, straight white line is visible in the center of the image, indicating a scratch on the manufactured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/000.png",
+      "truth": "dent",
+      "score": 1.3501,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "dent",
+      "description": "a small round depression with shading in the center of the image"
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/001.png",
+      "truth": "dent",
+      "score": 1.0118,
+      "defect": true,
+      "top_region_hit": false,
+      "label": "spot",
+      "description": "A small, dark, irregular blot on a light-colored surface, likely a stain or blot of a different color."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/002.png",
+      "truth": "dent",
+      "score": 1.1042,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a small, light-colored, irregularly shaped area with a slightly darker surrounding, indicating a stain or blot on the surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/dent/003.png",
+      "truth": "dent",
+      "score": 0.974,
+      "defect": false,
+      "top_region_hit": null,
+      "label": null,
+      "description": null
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/000.png",
+      "truth": "spot",
+      "score": 1.2606,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A small, irregularly shaped brown stain on a light gray, textured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/001.png",
+      "truth": "spot",
+      "score": 1.3365,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "a small, dark, irregularly shaped stain on a light-colored surface"
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/002.png",
+      "truth": "spot",
+      "score": 1.6285,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A dark, irregularly shaped stain or blot on a light-colored manufactured surface."
+    },
+    {
+      "surface": "stone",
+      "image": "stone/test/spot/003.png",
+      "truth": "spot",
+      "score": 1.3685,
+      "defect": true,
+      "top_region_hit": true,
+      "label": "spot",
+      "description": "A small, brownish stain or blot on a light gray, textured surface."
+    }
+  ]
+}
